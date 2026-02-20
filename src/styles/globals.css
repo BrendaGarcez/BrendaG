@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+    
+        --color-bg: #0a0e1a;           
+        --color-surface: #111827;      
+        --color-border: #1f2937;       
+        --color-text: #e2e8f0;         
+        --color-muted: #64748b;        
+        --color-accent: #00ff88;       
+        --color-accent-dim: #00cc6a;   
+    }
+
+    body {
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        /* font-mono dá aquela vibe de terminal/dev */
+        font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    }
+
+    *:focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: 2px;
+    }
+}
+
+@layer utilities {
+    .text-gradient {
+        background: linear-gradient(135deg, #00ff88, #00aaff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .glow-border {
+        box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
+        border: 1px solid rgba(0, 255, 136, 0.2);
+    }
+}
